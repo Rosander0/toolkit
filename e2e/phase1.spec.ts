@@ -120,3 +120,4 @@ test.describe('Phase 1: Skeleton, Tool Registry & Navigation', () => {
     await expect(pdfToolsTab).toHaveClass(/active/);
   });
 });
+

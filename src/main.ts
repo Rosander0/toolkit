@@ -128,3 +128,4 @@ document.addEventListener('DOMContentLoaded', () => {
     console.warn('Browser capability warning:', caps);
   }
 });
+

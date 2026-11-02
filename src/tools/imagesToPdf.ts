@@ -28,3 +28,4 @@ export function renderImagesToPdf(container: HTMLElement): void {
     <div id="i2p-grid" class="thumbnail-grid" style="margin-top: 1rem;"></div>
   `;
 }
+

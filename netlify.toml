@@ -17,3 +17,4 @@
     # connect-src allows 'self' and the Office service origin (supports local dev and cloud deployment)
     # worker-src and script-src allow web workers and WebAssembly (wasm-unsafe-eval)
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self'; connect-src 'self' http://localhost:8000 http://127.0.0.1:8000 https://file-toolkit-office.onrender.com https://*.hf.space https://*.fly.dev; worker-src 'self' blob:; object-src 'none'; frame-ancestors 'none'; base-uri 'self';"
+

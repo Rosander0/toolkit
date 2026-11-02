@@ -44,3 +44,4 @@ export function renderPdfToImages(container: HTMLElement): void {
     <div id="p2i-page-selector" style="margin-top: 1rem;"></div>
   `;
 }
+

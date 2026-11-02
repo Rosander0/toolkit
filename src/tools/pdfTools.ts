@@ -27,3 +27,4 @@ export function renderPdfTools(container: HTMLElement): void {
     </div>
   `;
 }
+
