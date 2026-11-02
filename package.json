@@ -1,0 +1,29 @@
+{
+  "name": "file-toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "fflate": "0.8.2",
+    "heic2any": "0.0.4",
+    "pdf-lib": "1.17.1",
+    "pdfjs-dist": "4.10.38",
+    "utif": "3.1.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.50.1",
+    "@types/node": "22.13.9",
+    "@types/utif": "3.0.6",
+    "typescript": "5.8.2",
+    "vite": "6.2.0",
+    "vitest": "3.0.7"
+  }
+}
