@@ -40,3 +40,4 @@ describe('Batch Processing & Filename Safety in Image Workflows', () => {
     expect(sanitizedZipNames[3]).toBe('bad_name_.jpg');
   });
 });
+

@@ -57,3 +57,4 @@ export function encodeBmp(imageData: ImageData): ArrayBuffer {
 
   return buffer;
 }
+

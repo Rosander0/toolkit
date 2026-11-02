@@ -40,3 +40,4 @@ describe('BMP Encoder', () => {
     expect(bytes[57]).toBe(255); // A
   });
 });
+

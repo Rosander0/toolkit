@@ -188,3 +188,4 @@ test.describe('Phase 2: Image Converter E2E Acceptance Tests', () => {
     await expect(zipBtn).toBeVisible();
   });
 });
+
