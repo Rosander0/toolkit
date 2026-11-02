@@ -175,3 +175,4 @@ If deploying to Render, create a new **Web Service**, select **Docker**, set roo
 1. **Client-Side File Size Ceiling:** A 200 MB per-file threshold is enforced for image and PDF tools to prevent browser tab OOM crashes on mobile or resource-constrained devices.
 2. **HEIC Decoding Speed:** HEIC decoding runs client-side via WASM; 48MP+ mobile photos can take 2–5 seconds per photo to decode.
 3. **Office Cold Starts:** Free container hosts spin down on idle. First conversion after inactivity can take 30–60 seconds while the container initializes LibreOffice; the UI provides a progress notification and cancel button during this period.
+

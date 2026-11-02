@@ -69,3 +69,4 @@ describe('PDF Tools Core Logic (Vitest Acceptance Tests)', () => {
     expect(splitDoc.getPageCount()).toBe(3);
   });
 });
+
