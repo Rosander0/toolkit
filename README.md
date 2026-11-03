@@ -119,26 +119,31 @@ If deploying to Render, create a new **Web Service**, select **Docker**, set roo
 
 ---
 
-### Step 2: Deploy Frontend to Netlify
-1. Push the repository to GitHub:
-   ```bash
-   git remote add origin https://github.com/<your-username>/personal-file-toolkit.git
-   git branch -M main
-   git push -u origin main
-   ```
-2. In [Netlify Dashboard](https://app.netlify.com/):
+### Step 2: Deploy Frontend to Vercel (Recommended)
+1. In [Vercel Dashboard](https://vercel.com/dashboard):
+   * Click **Add New...** &rarr; **Project**.
+   * Import your GitHub repository: **`Rosander0/toolkit`**.
+   * Framework Preset: **Vite** (detected automatically).
+   * Build & Output Settings:
+     * Build Command: `npm run build`
+     * Output Directory: `dist`
+   * Environment Variables:
+     * Add `VITE_OFFICE_SERVICE_URL` = `https://<your-office-service-url>`
+2. Click **Deploy**. Vercel deploys within 15–20 seconds and assigns an instant, stable `*.vercel.app` domain with automated SSL.
+3. Vercel automatically respects `vercel.json` with all security headers (CSP, frame-ancestors, worker-src) and SPA rewrites. Every `git push` to `main` deploys automatically!
+
+---
+
+### Step 3: Alternative Deploy to Netlify
+1. In [Netlify Dashboard](https://app.netlify.com/):
    * Click **Add new site** &rarr; **Import an existing project** &rarr; **GitHub**.
    * Select your repository.
    * Netlify automatically reads `netlify.toml`:
      * Build command: `npm run build`
      * Publish directory: `dist`
-3. In Netlify Site Settings &rarr; **Environment variables**:
+2. In Netlify Site Settings &rarr; **Environment variables**:
    * Set `VITE_OFFICE_SERVICE_URL` = `https://<your-office-service-url>`
-4. In `netlify.toml`, ensure `connect-src` in the `Content-Security-Policy` header matches your service URL:
-   ```toml
-   Content-Security-Policy = "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self'; connect-src 'self' https://<your-office-service-url>; worker-src 'self' blob:; object-src 'none'; frame-ancestors 'none';"
-   ```
-5. Click **Deploy Site**. Every subsequent `git push origin main` will auto-deploy!
+3. Click **Deploy Site**.
 
 ---
 

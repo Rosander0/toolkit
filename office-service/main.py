@@ -14,7 +14,7 @@ app = FastAPI(title="Office to PDF Gateway", docs_url=None, redoc_url=None)
 GOTENBERG_URL = os.getenv("GOTENBERG_URL", "http://127.0.0.1:3000")
 SERVICE_PASSPHRASE = os.getenv("SERVICE_PASSPHRASE", "file-toolkit-secret")
 SERVICE_PASSPHRASE_HASH = os.getenv("SERVICE_PASSPHRASE_HASH", "")
-ALLOWED_ORIGIN = os.getenv("ALLOWED_ORIGIN", "http://localhost:5173,http://127.0.0.1:5173")
+ALLOWED_ORIGIN = os.getenv("ALLOWED_ORIGIN", "http://localhost:5173,http://127.0.0.1:5173,https://*.vercel.app,https://*.netlify.app")
 MAX_UPLOAD_SIZE_MB = int(os.getenv("MAX_UPLOAD_SIZE_MB", "25"))
 MAX_UPLOAD_SIZE_BYTES = MAX_UPLOAD_SIZE_MB * 1024 * 1024
 MAX_CONCURRENT_CONVERSIONS = int(os.getenv("MAX_CONCURRENT_CONVERSIONS", "2"))
